@@ -1,0 +1,2 @@
+class and objects :
+class is the blueprint(model) for providing objects, this class provides you to create objects

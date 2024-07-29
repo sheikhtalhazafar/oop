@@ -1,0 +1,68 @@
+// ascending and descending order print
+#include <iostream>
+#include<stdio.h>
+using namespace std;
+
+int main() {
+    int a[5];
+    int i,j, temp;
+    cout<< "enter array";
+    
+    for(i=0; i<5; i++){
+         cin>> a[i]; // 5 4 2 1 3
+    }
+    for(i=0; i<5; i++){
+        
+        for(j=i+1; j<5; j++){  //4
+            if(a[i]>a[j]){  // i=5 > j=3
+                temp = a[i]; // temp = 5
+                a[i] = a[j]; // i = 3
+                a[j] = temp; // j = 5
+            }
+        }
+    }
+    
+     for(i=0; i<5; i++){
+         cout<< a[i]; // 5 4 2 1 3
+    }
+    
+}
+
+
+
+
+
+
+// bubble sort
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<stdio.h>
+using namespace std;
+
+int main() {
+    
+    int a[6];
+    int i, count, temp;
+    cout<<"enter array";
+    for(i=0; i<6; i++){
+        cin>>a[i];
+    }
+    cout<<"array sotred using bubble sort : ";
+    count = 1;
+    while(count<6){
+        for(int i=0; i<6-count; i++){
+            if(a[i]>a[i+1]){
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                }
+    count++;
+            
+        }
+        
+           for(i=0; i<6; i++){
+        cout<<a[i];
+    }
+
+    return 0;
+}
