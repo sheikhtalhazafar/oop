@@ -1,4 +1,82 @@
-// interfaces
+// enums : represent constant values
+
+void main(){
+  person prsn =person('ayesha', gender.female);
+  // prsn.displayinfo();
+  switch(prsn.Gender){
+    case gender.male:
+     print('i am male');
+    
+    case gender.female:
+     print('i am female');
+
+    case gender.other:
+     print('i am other');
+  }
+}
+
+class person{
+  String name;
+  gender Gender;
+  person(this.name, this.Gender);
+  
+  void displayinfo(){
+    print('my name is ${name}');
+    if(Gender == gender.male){
+      print('i am male');
+    }
+    else if(Gender == gender.female){
+      print('i am female');
+    }else{
+       print('i am other');
+    }
+  }
+}
+
+enum gender{
+  male,
+  female,
+  other;
+}
+
+
+// mixin we to share code between different classes, it has no constructor and no object
+
+// import 'dart:io';
+
+// void main(){
+//   person p = person('talha@gmail.com', '123');
+//   p.displayinfo();
+// }
+
+// class person with validation{
+//   String? email;
+//   String password;
+
+//   person(this.email, this.password);
+
+//   void displayinfo(){
+//     print('email : ${email}');
+//  print('password : ${validator(password)}');
+//   }
+
+// }
+
+
+
+// mixin validation{
+//   String? validator(String value){
+//     if(value.isEmpty){
+//       return 'password can not be null';
+//     }
+//     if(value.length < 6){
+//       return 'password is week';
+//     }
+//     return value;
+//   }
+// }
+
+
 
 // void main(){
 //   dog _dog = dog('dog');
